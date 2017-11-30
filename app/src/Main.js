@@ -1,12 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-import { Button } from 'reactstrap';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 import Header from './Header';
 import Search from './Search';
 import Article from './Article';
+// import Saved from './Saved';
+// import Results from './Results';
 
 export default class Main extends React.Component {
 constructor(props) {
@@ -18,13 +19,13 @@ constructor(props) {
     articles: [],
     savedData: [],
   }
-  // this.handleTopic = this.handleTopic.bind(this);
-  // this.handleStartYear = this.handleStartYear.bind(this);
-  // this.handleEndYear = this.handleEndYear.bind(this);
-  // this.getData = this.getData.bind(this);
-  // this.saveArticle = this.saveArticle.bind(this);
-  // this.update = this.update.bind(this);
-  // this.deleteArticle = this.update.bind(this);
+  this.handleTopic = this.handleTopic.bind(this);
+  this.handleStartYear = this.handleStartYear.bind(this);
+  this.handleEndYear = this.handleEndYear.bind(this);
+  this.getData = this.getData.bind(this);
+  this.saveArticle = this.saveArticle.bind(this);
+  this.update = this.update.bind(this);
+  this.deleteArticle = this.update.bind(this);
 }
 
 componentWillMount() {
